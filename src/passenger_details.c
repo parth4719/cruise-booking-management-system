@@ -1,19 +1,9 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include "passenger_details.h"
 
-//Creating the structure to store the details
-struct details
-{
-    char name[20];
-    int age;
-    char gender[10];
-    char email[20];
-    struct details *next;
-};
 //Function that stores the passenger details into a linked list and return the head address
 int passenger_details(int no_of_pass)
 {
+    //Initialzing the local variables
     int track = 1,k = no_of_pass, count = 1;
     char name[20];
     int age;
@@ -27,6 +17,11 @@ int passenger_details(int no_of_pass)
     {
         //Getting the details and storing in a structure
         passenger = (struct details*)malloc(sizeof(struct details));
+        if (!passenger)
+        {
+            printf("Error creating new node (malloc failed)\n");
+            exit(0);
+        }
         printf("Enter the name of passenger-%d \n",track);
         scanf("%s",&name);
         strcpy(passenger->name,name);
@@ -44,16 +39,34 @@ int passenger_details(int no_of_pass)
         {
             head = passenger;
             head->next = NULL;
+            track++;
         }
-        //Adding next passenger to the end of the linked list
-        temp = head;
-        while(temp->next != NULL)
+        else
         {
-            temp = temp->next;
+            //Adding passengers to the end of the linked list
+            temp = head;
+            while(temp->next != NULL)
+            {
+                temp = temp->next;
+            }
+            temp->next = passenger;
+            passenger->next = NULL;
+            //Searching for the duplication
+            temp = head;
+            while (temp->next != NULL)
+            {
+                if (strcmp(temp->name,name) == 0)
+                {
+                    printf("Passenger details are already present. Try again !!\n");
+                    free(passenger);
+                    no_of_pass += 1;
+                    track--;
+                    break;
+                }
+                temp = temp->next;
+            }
+            track++;
         }
-        temp->next = passenger;
-        passenger->next = NULL;
-        track++;
     }
     //Printing the passenger details
     temp=head;
@@ -75,17 +88,4 @@ int passenger_details(int no_of_pass)
         count++;
     }
     return head; //returning the head address of the linked list
-}
-void main()
-{
-    int no_of_pass = 0, head_address = 0;
-    printf("Input number of passangers:\n");
-    scanf("%d",&no_of_pass);
-    if(no_of_pass <= 0)
-    {
-        printf("No passengers to be added");
-        exit(0);
-    }
-    head_address = passenger_details(no_of_pass);
-    printf("The memory address is %d \n",head_address);
 }
