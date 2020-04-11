@@ -1,72 +1,31 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
 /**
- * @brief structure to store the travel package details selected by the passenger
+ * @file package_availability.h
+ *
+ * @brief A Function to check the availability of seats in the particular cruise opted by the customer.
+ *
+ * @author Spandana Manjappa Karehanumannara - kmspandanakarehanuma@cmail.carleton.ca
+ *
  */
-struct package_choosen
-{
-    char package[100];
-    char travel_length[100];
-    int fare;
-};
 
-/**
- * @brief Maximum number of seats available in all the cruises
+
+#ifndef PACKAGE_AVAILABILITY_H
+#define PACKAGE_AVAILABILITY_H
+
+
+ /**
+ * @brief Checks the availability of seats in the cruise.
+ *
+ * @param[in] cruise_selected     The type of cruise selected for booking.
+ * @param[in] no_of_pass          Total number of passengers travelling in one booking.
+ * @param[in] array of integer    Array of total number of seats available in all the cruise types.
+ *
+ * @details Function takes the selected cruise type, number of passengers and total numbers of seats in all the cruise as input,
+ * and checks the seat availability for number of passengers provided in the particular selected cruise type.
+ *
+ *
+ * @return If seats available returns -1, if seats are not available returns the count of remaining available seats in the cruise.
  */
-#define CRUISE_TOTAL_SEATS 100
+int package_availability(int cruise_selected, int no_of_pass,int []);
 
 
-/**
- * @brief Checks the availability of the requested number of seats in the particular cruise
- * 
- * @param[in] travel_package      type of travel package selected
- * @param[in] trip_length         number of nights of travel
- * @param[in] no_of_passengers    Total number of passengers travelling
- * 
- * @return  1 if seats available, else return 0.
- */
- int package_availability(int travel_package,int trip_length,int no_of_passengers);
-
-
-/**
- * @brief Stores the details of all the passengers travelling
- * 
- * @param[in] no_of_passengers    Total number of passengers travelling
- * 
- * @return returning the head address of the linked list
- */
-int passenger_details(int  num_of_pass);
-
-/**
- * @brief available number of seats is updated after every booking confirmation
- */
-int available_seats;
-
-/*
-* @brief Keeps track of the booked number of seats of Cape Liberty to Bermuda - 5 Nights Cruise
-*/
-static int cape_5_nyt_seats_alloted = 0;
-
-/*
-* @brief Keeps track of the booked number of seats of Cape Liberty to Bermuda - 7 Nights Cruise
-*/
-static int cape_7_nyt_seats_alloted = 0;
-
-/*
-* @brief Keeps track of the booked number of seats of Barcelona to Europe - 7 Nights Crusie
-*/
-static int barcelona_seats_alloted = 0;
-
-/*
-* @brief Keeps track of the booked number of seats of Honolulu to Hawaii - 7 Nights Crusie
-*/
-static int honolulu_7_nyt_seats_alloted = 0;
-
-/*
-* @brief Keeps track of the booked number of seats of Honolulu to Hawaii - 10 Nights Crusie
-*/
-static int honolulu_10_nyt_seats_alloted = 0;
-
-
+#endif
