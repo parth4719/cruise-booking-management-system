@@ -6,8 +6,6 @@
  *
  */
 
-
-
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -196,7 +194,17 @@ int booking(void) {
                                         break;
                                     }else{
                                          printf("Sorry:( %d seats are left\n",  available);
-                                         break;
+					 printf("Do you want to continue with existing booking? Press '1' to contiue '0' to exit.");
+                                         scanf("%d",&continue_booking);
+                                         if(continue_booking){
+                                            /*
+					    *  TO DO -- Call fair_calculation function
+					    */
+                                            break;
+                                         }else{
+                                             printf("Thankyou..See you again!\n");
+                                             break;
+                                         }
                                     }
                             case 2: printf("What is the name of the passenger you would like to remove? \n");
                                     /*
