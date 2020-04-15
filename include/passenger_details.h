@@ -1,35 +1,29 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
 /**
  * @file passenger_details.h
  *
- * @brief Implementation of the linked list data structure.
- * Implements a linked-list for the purpose of storing the details of the passengers.
+ * @brief Reading the details of the passengers and storing the details into "passenger_details.csv" file
+ *
+ * @author Thejprabahth Rayasam- thejprabhathrayasam@cmail.carleton.ca
  */
+
+#ifndef passenger_details_h
+#define passenger_details_h
 
 /**
- * @brief Defining the structure.
- */
-
-struct details
-{
-    char name[20];    //Name of the passenger
-    int age;          //Age of the passenger
-    char gender[10];  //Gender of the passenger
-    char email[20];   //Email of the passenger
-    struct details *next;
-};
+* Declaring the name of the csv file
+*/
+#define filename "passenger_details.csv"
 
 /**
- * @brief Creates a linked list which stores the details of the passengers
+ * @brief Adds the details of the passengers to "passenger_details.csv" file
  *
- * @param[in] no_of_pass  The number of passengers to travel
+ * @param[in] no_of_passengers The number of passengers to travel
  *
- * @details Creates a linked list consists of the above details of the passengers
- * which doesnot allow duplicate entries of the passengers
+ * @details Stores the passenger details consists of the 1.Name 2.Age 3.Gender 4.Email 5.Disability into an
+ * individual rows for every passenger into "passenger_details.csv" file.
  *
- * @return The memory address of the head of the linked list
+ * @return The number of the row of the first passenger of the booking in the csv file
  */
-int passenger_details(int no_of_pass);
+int passenger_details(int no_of_passengers);
+
+#endif /* passenger_details_h */
