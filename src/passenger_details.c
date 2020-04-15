@@ -25,7 +25,7 @@ int passenger_details(int no_of_passengers){
     char email[20];
     char disability[20];
 
-    fp=fopen("passenger_details.csv","r");
+    fp=fopen("file","r");
     /**
     * Checking whether the file is opened properly in reading mode
     */
@@ -40,7 +40,7 @@ int passenger_details(int no_of_passengers){
         count++;
 	}
     fclose(fp);
-    fp=fopen("passenger_details.csv","a");
+    fp=fopen("file","a");
     for(i = 1; i <= no_of_passengers; i++){
         /**
         * Asking for the passenger's name
