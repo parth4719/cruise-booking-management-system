@@ -25,7 +25,7 @@ int passenger_details(int no_of_passengers){
     char email[20];
     char disability[20];
 
-    fp=fopen(file,"r");
+    fp=fopen(file2,"r");
     /**
     * Checking whether the file is opened properly in reading mode
     */
@@ -40,7 +40,7 @@ int passenger_details(int no_of_passengers){
         count++;
 	}
     fclose(fp);
-    fp=fopen(file,"a");
+    fp=fopen(file2,"a");
     for(i = 1; i <= no_of_passengers; i++){
         /**
         * Asking for the passenger's name
