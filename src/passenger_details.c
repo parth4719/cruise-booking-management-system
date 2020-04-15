@@ -54,8 +54,8 @@ int passenger_details(int no_of_passengers){
         age_value = scanf("%d",&age);
         while(age_value != 1 || age<0 || age>100){
             while((temp=getchar()) != EOF && temp != '\n');
-            printf("Oops invalid input!! Please try entering age in number!");
-            printf("\nEnter the passenger-%d age:",i);
+            printf("Please enter a valid number for age of the passenger.\n");
+            printf("Enter the passenger-%d age:\n",i);
             age_value = scanf("%d",&age);
         }
         /**
@@ -76,9 +76,9 @@ int passenger_details(int no_of_passengers){
         /**
         * Storing the details into the "passenger_details.csv" file
         */
-        fprintf(fp,"\n%s,%d,%s,%s,%s",name,age,gender,email,disability);
+        fprintf(fp,"%s,%d,%s,%s,%s\n",name,age,gender,email,disability);
     }
     fclose(fp);
-    printf("\n Passenger details are successfully saved.");
+    printf("Passenger details are successfully saved.\n");
     return count+1;
 }
