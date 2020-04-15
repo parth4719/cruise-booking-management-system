@@ -6,13 +6,13 @@
  * @author Thejprabahth Rayasam- thejprabhathrayasam@cmail.carleton.ca
  */
 
-#ifndef passenger_details_h
-#define passenger_details_h
+#ifndef PASSENGER_DETAILS_H
+#define PASSENGER_DETAILS_H
 
 /**
 * Declaring the name of the csv file
 */
-#define filename "passenger_details.csv"
+#define file "passenger_details.csv"
 
 /**
  * @brief Adds the details of the passengers to "passenger_details.csv" file
