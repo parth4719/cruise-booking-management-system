@@ -1,0 +1,8 @@
+suite name,no of suites,capacity,additional fares,Discount
+Inside state room,10,4,0,0
+Outside state room,8,2,0,0
+Balcony room,6,2,100,5
+Suite room,4,2,300,5
+Family room,4,4,250,15
+Honeymoon suite,2,2,500,10
+Solo cabin,4,1,0,0
