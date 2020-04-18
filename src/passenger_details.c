@@ -1,91 +1,84 @@
+/**
+ * @file passenger_details.c
+ *
+ * @brief Reading the details of the passengers and storing the details into "passenger_details.csv" file
+ *
+ * @author Thejprabahth Rayasam- thejprabhathrayasam@cmail.carleton.ca
+ */
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 #include "passenger_details.h"
 
-//Function that stores the passenger details into a linked list and return the head address
-int passenger_details(int no_of_pass)
-{
-    //Initialzing the local variables
-    int track = 1,k = no_of_pass, count = 1;
+int passenger_details(int no_of_passengers){
+    /**
+    * Declaring the variables
+    */
+    FILE *fp;
+    int i=0,count=0;
+    int age_value=0,temp=0;
+    char buff[1024];
     char name[20];
-    int age;
+    int age = 0;
     char gender[10];
     char email[20];
-    struct details *head = NULL;
-    struct details *passenger = NULL;
-    struct details *temp = NULL;
-    printf("\nEnter passenger details :\n");
-    for(no_of_pass;no_of_pass!=0;no_of_pass--)
-    {
-        //Getting the details and storing in a structure
-        passenger = (struct details*)malloc(sizeof(struct details));
-        if (!passenger)
-        {
-            printf("Error creating new node (malloc failed)\n");
-            exit(0);
-        }
-        printf("Enter the name of passenger-%d \n",track);
-        scanf("%s",&name);
-        strcpy(passenger->name,name);
-        printf("Enter the age of passenger-%d \n",track);
-        scanf("%d",&age);
-        passenger->age=age;
-        printf("Enter the gender of passenger-%d \n",track);
-        scanf("%s",&gender);
-        strcpy(passenger->gender,gender);
-        printf("Enter the email of passenger-%d \n",track);
-        scanf("%s",&email);
-        strcpy(passenger->email,email);
-        //Adding first passenger to the linked list
-        if (head == NULL)
-        {
-            head = passenger;
-            head->next = NULL;
-            track++;
-        }
-        else
-        {
-            //Adding passengers to the end of the linked list
-            temp = head;
-            while(temp->next != NULL)
-            {
-                temp = temp->next;
-            }
-            temp->next = passenger;
-            passenger->next = NULL;
-            //Searching for the duplication
-            temp = head;
-            while (temp->next != NULL)
-            {
-                if (strcmp(temp->name,name) == 0)
-                {
-                    printf("Passenger details are already present. Try again !!\n");
-                    free(passenger);
-                    no_of_pass += 1;
-                    track--;
-                    break;
-                }
-                temp = temp->next;
-            }
-            track++;
-        }
+    char disability[20];
+
+    fp=fopen(file2,"r");
+    /**
+    * Checking whether the file is opened properly in reading mode
+    */
+    if(fp == NULL){
+        printf("File does not exist/The file is open.\n");
+        exit(0);
     }
-    //Printing the passenger details
-    temp=head;
-    printf("\nThe passenger details are:\n\n");
-    for(k;k!=0;k--)
-    {
-        if(head==NULL)
-        {
-            printf("Empty list !!");
-            return 0;
-        }
-        printf("passenger-%d details:\n",count);
-        printf("Name : %s\n",temp->name);
-        printf("Age : %d\n",temp->age);
-        printf("Gender : %s\n",temp->gender);
-        printf("Email : %s\n",temp->email);
-        printf("\n");
-        temp = temp->next;
+    /**
+    * Counting the number of rows in the file
+    */
+    while(fgets(buff,1024, fp)!=NULL){
         count++;
+	}
+    fclose(fp);
+    fp=fopen(file2,"a");
+    for(i = 1; i <= no_of_passengers; i++){
+        /**
+        * Asking for the passenger's name
+        */
+        printf("Enter the passenger-%d name:\n",i);
+        scanf("%s",name);
+        /**
+        * Asking for the passenger's age
+        */
+        printf("Enter the passenger-%d age:\n",i);
+        age_value = scanf("%d",&age);
+        while(age_value != 1 || age<0 || age>100){
+            while((temp=getchar()) != EOF && temp != '\n');
+            printf("Please enter a valid number for age of the passenger.\n");
+            printf("Enter the passenger-%d age:\n",i);
+            age_value = scanf("%d",&age);
+        }
+        /**
+        * Asking for the passenger's gender
+        */
+        printf("Enter the passenger-%d gender:\n",i);
+        scanf("%s",gender);
+        /**
+        * Asking for the passenger's email address
+        */
+        printf("Enter the passenger-%d email:\n",i);
+        scanf("%s",email);
+        /**
+        * Asking for the passenger disability
+        */
+        printf("Enter whether the passenger-%d is disabled(yes/no): \n",i);
+        scanf("%s",disability);
+        /**
+        * Storing the details into the "passenger_details.csv" file
+        */
+        fprintf(fp,"%s,%d,%s,%s,%s\n",name,age,gender,email,disability);
     }
-    return head; //returning the head address of the linked list
+    fclose(fp);
+    printf("Passenger details are successfully saved.\n");
+    return count+1;
 }
