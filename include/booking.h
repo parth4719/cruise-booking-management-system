@@ -10,8 +10,6 @@
 #ifndef BOOKING_H
 #define BOOKING_H
 
-
-
 /**
  * @brief A Function to book tickets for different cruises.
  *
@@ -26,20 +24,12 @@
 */
  #define filename "Details.csv"
 
- /**
- * @brief Structure to store cruise details
- *
- * @details Structure package stores package name, fare per person and total no. of seats availavle in the cruise type.
- *
- */
-struct package{
-    char *package_name;
-    int *fare;
-    int *total_seats;
-}cruise;
+
+ #define storing_file "Bookings_info.csv"
 
 
- /**
+
+/**
  * @brief Reads the file pointed by fp.
  *
  * @param[in] char *     File name as input parameter.
@@ -51,4 +41,17 @@ struct package{
  */
 int read_file(char *);
 
+
+void add_pass();
+
+
+void write_into_file(int row_count, int file_id, char *cruise_name, int no_of_pass, float total_fare, int *room_booked);
+
+//void update_seats(int seats_in_cruises[], int row_count, struct package *cruise);
+
+
+
 #endif
+
+
+
