@@ -12,7 +12,12 @@
 /**
 * Declaring the name of the csv file
 */
-#define file2 "passenger_details.csv"
+#define fname "pass_temp.csv"
+
+/**
+* Declaring the name of the csv file
+*/
+#define ffname "passenger_details.csv"
 
 /**
  * @brief Adds the details of the passengers to "passenger_details.csv" file

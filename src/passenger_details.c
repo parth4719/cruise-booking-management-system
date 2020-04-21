@@ -25,7 +25,7 @@ int passenger_details(int no_of_passengers){
     char email[20];
     char disability[20];
 
-    fp=fopen(file2,"r");
+    fp=fopen(ffname,"r");
     /**
     * Checking whether the file is opened properly in reading mode
     */
@@ -38,9 +38,9 @@ int passenger_details(int no_of_passengers){
     */
     while(fgets(buff,1024, fp)!=NULL){
         count++;
-	}
+}
     fclose(fp);
-    fp=fopen(file2,"a");
+    fp=fopen(fname,"w+");
     for(i = 1; i <= no_of_passengers; i++){
         /**
         * Asking for the passenger's name
@@ -73,6 +73,11 @@ int passenger_details(int no_of_passengers){
         */
         printf("Enter whether the passenger-%d is disabled(yes/no): \n",i);
         scanf("%s",disability);
+        while(strncmp(disability, "yes",3) && strncmp(disability, "no",2)){
+            printf("Invalid input! Please try entering (yes/no) in lower case only!\n");
+            printf("Enter whether the passenger-%d is disabled(yes/no): \n",i);
+            scanf("%s",disability);
+        }
         /**
         * Storing the details into the "passenger_details.csv" file
         */
