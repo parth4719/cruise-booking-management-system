@@ -38,15 +38,12 @@ void remove_passenger(int no_of_pass){
 		scanf("%d",&delete);
 		fp=fopen("pass_temp.csv","r");
 	    fp1=fopen("temporary.csv","w+");
-		while (!feof(fp))
-        {
+		while (!feof(fp)){
             strcpy(str, "\0");
             fgets(str, 1024, fp);
-            if (!feof(fp))
-            {
+            if (!feof(fp)){
                 ctr++;
-                if (ctr != delete)
-                {
+                if (ctr != delete){
                     fprintf(fp1, "%s", str);
                 }
             }
