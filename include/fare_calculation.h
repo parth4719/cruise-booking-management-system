@@ -22,6 +22,12 @@
   *
   * @param[in]  package_fare        Array of the fares for the available cruises read from the file
   *
+  * @param[in]  cruise_selected     The cruise selected for the booking
+  *
+  * @param[in]  suite_length        Number of suites on cruise
+  *
+  * @param[in]  room_booked         Pointer to array that has stored the rooms selected for that booking
+  *
   * @details    Function takes the number of passengers for the cruise selected, the cruise fare, the types of rooms selected,
   * the fares and discounts for different types of rooms as input
   * and applies discounts for specially abled, different age groups of passengers and group size to calculate the total fare of that booking
@@ -29,6 +35,6 @@
   * @return     Returns the total fare of the booking
   */
 
- float fare_calculation(int no_of_pass, int package_fare);
+ float fare_calculation(int no_of_pass, int package_fare, int cruise_selected, int suite_length, int *room_booked);
 
  #endif /*fare_calculation_h*/
