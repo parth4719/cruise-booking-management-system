@@ -33,7 +33,7 @@ For Cancelllation of booking, the software needs to ask the user to provide book
   ---4. Honolulu to Hawaii - 7 nights
   ---5. Honolulu to Hawaii - 10 nights
 
-   - User can add more cruise options by providing details like source and destination, total fare per person and also the total seats available in all the cruises  in the [Details.csv](***************TODO*****provide link of "Details.csv")
+   - User can add more cruise options by providing details like source and destination, total fare per person and also the total seats available in all the cruises  in the [Details.csv](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/src/Details.csv)
    
 2.  **"suite_selection.csv"** ---> Contains information regarding different types of suite names, no. of suites available, suite capacity, additonal fare and discounts. For now the following suite types are considered.
  ---1. Inside state room - 10 rooms
@@ -43,8 +43,8 @@ For Cancelllation of booking, the software needs to ask the user to provide book
  ---5. Family room - 4 rooms
  ---6. Honeymoon suite - 2 rooms
  ---7. Solo cabin - 4 rooms
-    - User can add more suite options by updating the information in [Suite_selection.csv](***************TODO*****provide link of "Suite Selection.csv")
-	- The user should name the files suiteselction.csv in series providing the number of the cruise as a prefix for the file name. Example: [1Suite_selection] belongs to package name 1 mentioned in the [Details.csv](***************TODO*****provide link of "Details.csv"). 
+    - User can add more suite options by updating the information in [Suite_selection.csv](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/src/1suite_selection.csv)
+	- The user should name the files suiteselction.csv in series providing the number of the cruise as a prefix for the file name. Example: [1Suite_selection](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/src/1suite_selection.csv) belongs to package name 1 mentioned in the [Details.csv](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/src/Details.csv). 
 (*****************Complete this line properly****).
 	- Suppose if the client wants to add extra type of room only in one of the cruises. The client should add the details of that particular room in the respective "suite_selection.csv" file. And also has to update the other suite_selection files, with the new room type, but keeping the room count as zero, just for the consistency of the workflow. 
 
@@ -64,3 +64,5 @@ The program flow for the application is as follows:
   -  **"Passenger_details.csv"**---> Everytime the  booking is confirmed the passenger details of the respective booking gets stored into this file.
   -  **"Bookings-info.csv"**---> After every booking confirmation,  information about selected crusie type, and count of each suites type booked will be updated in this file.
   -  **"Suite_selction.csv"**---> After the confirmation of every booking, the count of each type of suites left available in all the cruises, will be updated into respective cruise suite_selection.csv file. 
+  - The cancellation.c is called to ask the user for 1. Full Cancellation or 2. Partial Cancelaltion.
+  - If the user selects Full Cancellation, the full_cancellation.c function is called, it displays the booking details using the booking ID, and Total fare will be displayed by reducing the cancellation chanrges. The user will be asked for the confirmation. IF the user confirms, all the detials of that particular booking will be deleted from the files.
