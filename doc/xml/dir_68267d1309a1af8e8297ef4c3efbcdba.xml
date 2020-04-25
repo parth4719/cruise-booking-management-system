@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="add__pass_8c">add_pass.c</innerfile>
+    <innerfile refid="add__passenger_8c">add_passenger.c</innerfile>
+    <innerfile refid="booking_8c">booking.c</innerfile>
+    <innerfile refid="cancellation_8c">cancellation.c</innerfile>
+    <innerfile refid="delete__passenger_8c">delete_passenger.c</innerfile>
+    <innerfile refid="display__booking__details_8c">display_booking_details.c</innerfile>
+    <innerfile refid="fare__calculation_8c">fare_calculation.c</innerfile>
+    <innerfile refid="full__cancellation_8c">full_cancellation.c</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <innerfile refid="package__availability_8c">package_availability.c</innerfile>
+    <innerfile refid="passenger__details_8c">passenger_details.c</innerfile>
+    <innerfile refid="read__file_8c">read_file.c</innerfile>
+    <innerfile refid="refund__calculation_8c">refund_calculation.c</innerfile>
+    <innerfile refid="remove__passenger_8c">remove_passenger.c</innerfile>
+    <innerfile refid="suite__selection_8c">suite_selection.c</innerfile>
+    <innerfile refid="update__seats_8c">update_seats.c</innerfile>
+    <innerfile refid="update__suite__selection_8c">update_suite_selection.c</innerfile>
+    <innerfile refid="write__into__file_8c">write_into_file.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

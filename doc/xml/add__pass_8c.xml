@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="add__pass_8c" kind="file" language="C++">
+    <compoundname>add_pass.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">../include/booking.h</includes>
+    <includes local="yes">../include/passenger_details.h</includes>
+    <includes local="yes">../include/package_availability.h</includes>
+    <includes local="yes">../include/suite_selection.h</includes>
+    <includes local="yes">../include/update_suite_selection.h</includes>
+    <includes local="yes">../include/add_passenger.h</includes>
+    <includes local="yes">../include/fare_calculation.h</includes>
+    <includes local="yes">../include/remove_passenger.h</includes>
+    <includes local="yes">../include/read_file.h</includes>
+    <includes local="yes">../include/add_pass.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>../include/remove_passenger.h</label>
+      </node>
+      <node id="10">
+        <label>../include/add_passenger.h</label>
+      </node>
+      <node id="9">
+        <label>../include/update_suite_selection.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>src/add_pass.c</label>
+        <link refid="add__pass_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../include/add_pass.h</label>
+      </node>
+      <node id="7">
+        <label>../include/package_availability.h</label>
+      </node>
+      <node id="13">
+        <label>../include/read_file.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>../include/booking.h</label>
+      </node>
+      <node id="11">
+        <label>../include/fare_calculation.h</label>
+      </node>
+      <node id="8">
+        <label>../include/suite_selection.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>../include/passenger_details.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="add__pass_8c_1a53b366f07b522abf2c85b4e142ca8f33" prot="public" static="no">
+        <name>fy1</name>
+        <initializer>&quot;../src/pass_temp.csv&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/add_pass.c" line="21" column="11" bodyfile="src/add_pass.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="add__pass_8c_1a65741511268639810c43a4828320c7c6" prot="public" static="no">
+        <name>fy2</name>
+        <initializer>&quot;../src/passenger_details.csv&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/add_pass.c" line="22" column="9" bodyfile="src/add_pass.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="add__pass_8c_1adb47568bbbeee764dca7c9b69eade624" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add_pass</definition>
+        <argsstring>(void)</argsstring>
+        <name>add_pass</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function replace the content from &quot;pass_temp.csv&quot; into &quot;passenger_details.csv&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the content from &quot;pass_temp.csv&quot; and stores in &quot;passenger_details.csv&quot; , and deletes the &quot;pass_temp.csv&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>This function copies the content from &quot;pass_temp.csv&quot; and stores in &quot;passenger_details.csv&quot; , and deletes the &quot;pass_temp.csv&quot;.</para>
+        </inbodydescription>
+        <location file="src/add_pass.c" line="32" column="6" bodyfile="src/add_pass.c" bodystart="32" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helps for adding the passengers into the file &quot;passenger_details.csv&quot;. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Thejprabhath Rayasam- <ulink url="mailto:thejprabhathrayasam@cmail.carleton.ca">thejprabhathrayasam@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/booking.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/passenger_details.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/package_availability.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/suite_selection.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/update_suite_selection.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/add_passenger.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/fare_calculation.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/remove_passenger.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/read_file.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/add_pass.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fy1<sp/>&quot;../src/pass_temp.csv&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fy2<sp/>&quot;../src/passenger_details.csv&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="add__pass_8c_1adb47568bbbeee764dca7c9b69eade624" kindref="member">add_pass</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffe[1024];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*f1<sp/>=<sp/>fopen(fy2,</highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*f2<sp/>=<sp/>fopen(fy1,</highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(f2<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>open<sp/>the<sp/>file<sp/>\&quot;pass_temp.csv\&quot;<sp/>in<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>__func__);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(f1<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>open<sp/>the<sp/>file<sp/>\&quot;passenger_details.csv\&quot;<sp/>in<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>__func__);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(fgets(buffe,<sp/>1024,<sp/>f2)){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f1,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,buffe);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(f1);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(f2);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>remove(</highlight><highlight class="stringliteral">&quot;../src/pass_temp.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/add_pass.c"/>
+  </compounddef>
+</doxygen>

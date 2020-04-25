@@ -1,0 +1,75 @@
+.TH "src/add_pass.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/add_pass.c \- Helps for adding the passengers into the file 'passenger_details\&.csv'\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/booking\&.h'\fP
+.br
+\fC#include '\&.\&./include/passenger_details\&.h'\fP
+.br
+\fC#include '\&.\&./include/package_availability\&.h'\fP
+.br
+\fC#include '\&.\&./include/suite_selection\&.h'\fP
+.br
+\fC#include '\&.\&./include/update_suite_selection\&.h'\fP
+.br
+\fC#include '\&.\&./include/add_passenger\&.h'\fP
+.br
+\fC#include '\&.\&./include/fare_calculation\&.h'\fP
+.br
+\fC#include '\&.\&./include/remove_passenger\&.h'\fP
+.br
+\fC#include '\&.\&./include/read_file\&.h'\fP
+.br
+\fC#include '\&.\&./include/add_pass\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBfy1\fP   '\&.\&./src/pass_temp\&.csv'"
+.br
+.ti -1c
+.RI "#define \fBfy2\fP   '\&.\&./src/passenger_details\&.csv'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd_pass\fP (void)"
+.br
+.RI "This function replace the content from 'pass_temp\&.csv' into 'passenger_details\&.csv'\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Helps for adding the passengers into the file 'passenger_details\&.csv'\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Thejprabhath Rayasam- thejprabhathrayasam@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void add_pass (void)"
+
+.PP
+This function replace the content from 'pass_temp\&.csv' into 'passenger_details\&.csv'\&. This function copies the content from 'pass_temp\&.csv' and stores in 'passenger_details\&.csv' , and deletes the 'pass_temp\&.csv'\&. This function copies the content from 'pass_temp\&.csv' and stores in 'passenger_details\&.csv' , and deletes the 'pass_temp\&.csv'\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

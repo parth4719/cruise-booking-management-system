@@ -1,0 +1,78 @@
+.TH "src/suite_selection.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/suite_selection.c \- A Function to book the different suite types in cruises\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/suite_selection\&.h'\fP
+.br
+\fC#include '\&.\&./include/read_file\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBsuite_selection\fP (int no_of_pass, int *room_booked, int cruise_selected)"
+.br
+.RI "Helps in booking different types of rooms for all the cruises\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Function to book the different suite types in cruises\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Vishnu Rajasekar - vishnurajasekar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int suite_selection (int no_of_pass, int * room_booked, int cruise_selected)"
+
+.PP
+Helps in booking different types of rooms for all the cruises\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno_of_passengers\fP The number of passengers to travel
+.br
+\fIroom_booked\fP the room booked in the cruises\&.
+.br
+\fIcruise_selected\fP The cruise selected by the passenger\&.
+.RE
+.PP
+User will be given options to select among different room types aviailable in all the cruises\&. Checking if the number of the passengers,rooms booked or cruise selected is less than zero\&.
+.PP
+Displaying the suites that are available\&.
+.PP
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fp
+.PP
+Prints the available room options for the customer to choose from
+.PP
+Booking the type of the suite that was elected by the passenger\&. Makes sure that all the passengers are booked under a room\&.
+.PP
+Loops until all the passengers are booked\&.
+.PP
+Reducing the total rooms available and incresing the overall booking count\&.
+.PP
+Allowing the passengers to select a different suite\&.
+.PP
+Informing of the unavailablity of the suite\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

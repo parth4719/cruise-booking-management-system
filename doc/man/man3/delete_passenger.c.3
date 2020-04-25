@@ -1,0 +1,70 @@
+.TH "src/delete_passenger.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/delete_passenger.c \- A function to calculate the refund for cancelled tickets\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/delete_passenger\&.h'\fP
+.br
+\fC#include '\&.\&./include/refund_calculation\&.h'\fP
+.br
+\fC#include '\&.\&./include/full_cancellation\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdelete_passenger\fP (int no_of_pass, int pass_count, int id)"
+.br
+.RI "Function to delete the records of selected passengers\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A function to calculate the refund for cancelled tickets\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Swetha Meenakshi Natarajan - swethameenakshinatar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void delete_passenger (int no_of_pass, int pass_count, int id)"
+
+.PP
+Function to delete the records of selected passengers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpass_count\fP Number of passengers in the booking
+.br
+\fIno_of_pass\fP Number of passengers to be deleted
+.br
+\fIid\fP Booking ID of ticket to be cancelled
+.RE
+.PP
+Function takes the booking id, number of passengers in booking and number of passengers to be deleted to delete the record of passengers If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fp
+.PP
+Removing the details row of the passenger\&.
+.PP
+Removing the f1 csv file\&.
+.PP
+Renaming the temp file as the f1 file\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

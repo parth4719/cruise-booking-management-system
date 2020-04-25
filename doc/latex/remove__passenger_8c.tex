@@ -1,0 +1,61 @@
+\hypertarget{remove__passenger_8c}{}\doxysection{src/remove\+\_\+passenger.c File Reference}
+\label{remove__passenger_8c}\index{src/remove\_passenger.c@{src/remove\_passenger.c}}
+
+
+This function removes the passenger details from the file \char`\"{}pass\+\_\+temp.\+csv\char`\"{}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/passenger\+\_\+details.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{remove__passenger_8c_a828796eac6e7325e3c8a56403b2a8c81}\label{remove__passenger_8c_a828796eac6e7325e3c8a56403b2a8c81}} 
+\#define {\bfseries fname}~\char`\"{}../src/pass\+\_\+temp.\+csv\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{remove__passenger_8c_a3a96520eb08aa7d5142b5ae46ca03102}{remove\+\_\+passenger}} (int no\+\_\+of\+\_\+pass)
+\begin{DoxyCompactList}\small\item\em Removes the details of the passengers from \char`\"{}pass\+\_\+temp.\+csv\char`\"{} file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This function removes the passenger details from the file \char`\"{}pass\+\_\+temp.\+csv\char`\"{}. 
+
+\begin{DoxyAuthor}{Author}
+Thejprabhath Rayasam -\/ \href{mailto:thejprabhathrayasam@cmail.carleton.ca}{\texttt{ thejprabhathrayasam@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{remove__passenger_8c_a3a96520eb08aa7d5142b5ae46ca03102}\label{remove__passenger_8c_a3a96520eb08aa7d5142b5ae46ca03102}} 
+\index{remove\_passenger.c@{remove\_passenger.c}!remove\_passenger@{remove\_passenger}}
+\index{remove\_passenger@{remove\_passenger}!remove\_passenger.c@{remove\_passenger.c}}
+\doxysubsubsection{\texorpdfstring{remove\_passenger()}{remove\_passenger()}}
+{\footnotesize\ttfamily void remove\+\_\+passenger (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+of\+\_\+pass }\end{DoxyParamCaption})}
+
+
+
+Removes the details of the passengers from \char`\"{}pass\+\_\+temp.\+csv\char`\"{} file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em no\+\_\+of\+\_\+pass} & The number of passengers that needs to be removed for the booking\\
+\hline
+\end{DoxyParams}
+Removes the passenger details consists of the 1.\+Name 2.\+Age 3.\+Gender 4.\+Email 5.\+Disability from \char`\"{}pass\+\_\+temp.\+csv\char`\"{} file. If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fp
+
+data read from 1st column of every row in the file is printed
+
+Requesting for the count of the passengers to be removed.
+
+Removing the row of the passenger detail that needs to be deleted.
+
+Removing the fname csv file.
+
+Renaming the temporary csv file and the fname file.

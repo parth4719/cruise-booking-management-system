@@ -1,0 +1,77 @@
+.TH "src/write_into_file.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/write_into_file.c \- Helps in updating the seat availability in the 'Details\&.csv'\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/booking\&.h'\fP
+.br
+\fC#include '\&.\&./include/write_into_file\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBstoring_file\fP   '\&.\&./src/Bookings_info\&.csv'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBwrite_into_file\fP (int suite_length, int file_id, int cruise_selected, char *package_name[], int no_of_pass, float total_fare, int *room_booked)"
+.br
+.RI "This function updates the available seats column in 'Details\&.csv' each time the booking is confirmed\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Helps in updating the seat availability in the 'Details\&.csv'\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Spandana Manjappa Karehanumannara - kmspandanakarehanuma@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void write_into_file (int suite_length, int file_id, int cruise_selected, char * package_name[], int no_of_pass, float total_fare, int * room_booked)"
+
+.PP
+This function updates the available seats column in 'Details\&.csv' each time the booking is confirmed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow_count\fP The count of no\&. of rows in the 'Detials\&.csv'\&.
+.br
+\fIfile_id\fP The row value of the first passenger belonging to particular booking stored in 'passenger_details\&.csv'\&.
+.br
+\fIcruise_selected\fP The number of cruise selected\&.
+.br
+\fIcruise_name\fP The name of the cruise selected\&.
+.br
+\fIno_of_pass\fP the total number of passengers in the specific booking\&.
+.br
+\fItotal_fare\fP the total fare value of specific booking\&.
+.br
+\fIroom_booked\fP The array contaning the no\&. of rooms booked and types of rooms booked of specific booking\&.
+.RE
+.PP
+After the booking is confirmed this function is called to store the all the booking details into 'Bookings_info\&.csv'\&. If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Storing the details into the 'bookings_info\&.csv' file
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

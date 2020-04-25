@@ -1,0 +1,69 @@
+.TH "src/update_seats.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/update_seats.c \- Helps in updating the total seats available in the 'Details\&.csv'\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/booking\&.h'\fP
+.br
+\fC#include '\&.\&./include/update_seats\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBfilename\fP   '\&.\&./src/Details\&.csv'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdate_seats\fP (int row_count, char *package_name[], int fare[], int total_seats[])"
+.br
+.RI "This function updates the available seats column in 'Details\&.csv' each time the booking is confirmed\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Helps in updating the total seats available in the 'Details\&.csv'\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Spandana Manjappa Karehanumannara - kmspandanakarehanuma@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void update_seats (int row_count, char * package_name[], int fare[], int total_seats[])"
+
+.PP
+This function updates the available seats column in 'Details\&.csv' each time the booking is confirmed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow_count\fP The count of no\&. of rows in the 'Detials\&.csv'\&.
+.br
+\fI*package_name[]\fP The array of strings containing the packages names of all the cruises read from 'Details\&.csv'\&.
+.br
+\fIfare\fP The integer array containing total fare of all the packages\&.
+.br
+\fItotal\fP seats The integer array containing the value of available seats in all the cruises\&.
+.RE
+.PP
+Everytime the booking is confirmed this function is called to update the available seats column in 'Details\&.csv' Function updates the available seats column in the 'Details\&.csv'
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

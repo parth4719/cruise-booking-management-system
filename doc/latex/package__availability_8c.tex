@@ -1,0 +1,55 @@
+\hypertarget{package__availability_8c}{}\doxysection{src/package\+\_\+availability.c File Reference}
+\label{package__availability_8c}\index{src/package\_availability.c@{src/package\_availability.c}}
+
+
+A Function to check the availability of seats in the particular cruise opted by the customer.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/package\+\_\+availability.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{package__availability_8c_a5203137713cd61a327252e299ce37b85}{package\+\_\+availability}} (int cruise\+\_\+selected, int no\+\_\+of\+\_\+pass, int total\+\_\+seats\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Checks the availability of seats in the cruise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Function to check the availability of seats in the particular cruise opted by the customer. 
+
+\begin{DoxyAuthor}{Author}
+Spandana Manjappa Karehanumannara -\/ \href{mailto:kmspandanakarehanuma@cmail.carleton.ca}{\texttt{ kmspandanakarehanuma@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{package__availability_8c_a5203137713cd61a327252e299ce37b85}\label{package__availability_8c_a5203137713cd61a327252e299ce37b85}} 
+\index{package\_availability.c@{package\_availability.c}!package\_availability@{package\_availability}}
+\index{package\_availability@{package\_availability}!package\_availability.c@{package\_availability.c}}
+\doxysubsubsection{\texorpdfstring{package\_availability()}{package\_availability()}}
+{\footnotesize\ttfamily int package\+\_\+availability (\begin{DoxyParamCaption}\item[{int}]{cruise\+\_\+selected,  }\item[{int}]{no\+\_\+of\+\_\+pass,  }\item[{int}]{total\+\_\+seats\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Checks the availability of seats in the cruise. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cruise\+\_\+selected} & The type of cruise selected for booking. \\
+\hline
+\mbox{\texttt{ in}}  & {\em no\+\_\+of\+\_\+pass} & Total number of passengers travelling in one booking. \\
+\hline
+\mbox{\texttt{ in}}  & {\em array} & of total seats Array of total number of seats available in all the cruise types.\\
+\hline
+\end{DoxyParams}
+Function takes the selected cruise type, number of passengers and total numbers of seats in all the cruise as input, and checks the seat availability for number of passengers provided in the particular selected cruise type.
+
+\begin{DoxyReturn}{Returns}
+If seats available returns -\/1, if seats are not available returns the count of remaining available seats in the cruise. 
+\end{DoxyReturn}
+Returns -\/2 if invalid parameters are provided to the function.
+
+Returns -\/1 if seats are available in the selected cruise.
+
+returns the count of remaining number of seats available in the selected cruise.

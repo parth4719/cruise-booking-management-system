@@ -1,0 +1,64 @@
+\hypertarget{write__into__file_8c}{}\doxysection{src/write\+\_\+into\+\_\+file.c File Reference}
+\label{write__into__file_8c}\index{src/write\_into\_file.c@{src/write\_into\_file.c}}
+
+
+Helps in updating the seat availability in the \char`\"{}\+Details.\+csv\char`\"{}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/booking.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/write\+\_\+into\+\_\+file.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{write__into__file_8c_ab6819e3f0410378cf5bf23c153d98c11}\label{write__into__file_8c_ab6819e3f0410378cf5bf23c153d98c11}} 
+\#define {\bfseries storing\+\_\+file}~\char`\"{}../src/Bookings\+\_\+info.\+csv\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{write__into__file_8c_a2a15e436f391675f6baec3367ef93a9c}{write\+\_\+into\+\_\+file}} (int suite\+\_\+length, int file\+\_\+id, int cruise\+\_\+selected, char $\ast$package\+\_\+name\mbox{[}$\,$\mbox{]}, int no\+\_\+of\+\_\+pass, float total\+\_\+fare, int $\ast$room\+\_\+booked)
+\begin{DoxyCompactList}\small\item\em This function updates the available seats column in \char`\"{}\+Details.\+csv\char`\"{} each time the booking is confirmed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helps in updating the seat availability in the \char`\"{}\+Details.\+csv\char`\"{}. 
+
+\begin{DoxyAuthor}{Author}
+Spandana Manjappa Karehanumannara -\/ \href{mailto:kmspandanakarehanuma@cmail.carleton.ca}{\texttt{ kmspandanakarehanuma@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{write__into__file_8c_a2a15e436f391675f6baec3367ef93a9c}\label{write__into__file_8c_a2a15e436f391675f6baec3367ef93a9c}} 
+\index{write\_into\_file.c@{write\_into\_file.c}!write\_into\_file@{write\_into\_file}}
+\index{write\_into\_file@{write\_into\_file}!write\_into\_file.c@{write\_into\_file.c}}
+\doxysubsubsection{\texorpdfstring{write\_into\_file()}{write\_into\_file()}}
+{\footnotesize\ttfamily void write\+\_\+into\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{suite\+\_\+length,  }\item[{int}]{file\+\_\+id,  }\item[{int}]{cruise\+\_\+selected,  }\item[{char $\ast$}]{package\+\_\+name\mbox{[}$\,$\mbox{]},  }\item[{int}]{no\+\_\+of\+\_\+pass,  }\item[{float}]{total\+\_\+fare,  }\item[{int $\ast$}]{room\+\_\+booked }\end{DoxyParamCaption})}
+
+
+
+This function updates the available seats column in \char`\"{}\+Details.\+csv\char`\"{} each time the booking is confirmed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em row\+\_\+count} & The count of no. of rows in the \char`\"{}\+Detials.\+csv\char`\"{}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+id} & The row value of the first passenger belonging to particular booking stored in \char`\"{}passenger\+\_\+details.\+csv\char`\"{}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em cruise\+\_\+selected} & The number of cruise selected.\\
+\hline
+\mbox{\texttt{ in}}  & {\em cruise\+\_\+name} & The name of the cruise selected.\\
+\hline
+\mbox{\texttt{ in}}  & {\em no\+\_\+of\+\_\+pass} & the total number of passengers in the specific booking.\\
+\hline
+\mbox{\texttt{ in}}  & {\em total\+\_\+fare} & the total fare value of specific booking.\\
+\hline
+\mbox{\texttt{ in}}  & {\em room\+\_\+booked} & The array contaning the no. of rooms booked and types of rooms booked of specific booking.\\
+\hline
+\end{DoxyParams}
+After the booking is confirmed this function is called to store the all the booking details into \char`\"{}\+Bookings\+\_\+info.\+csv\char`\"{}. If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Storing the details into the \char`\"{}bookings\+\_\+info.\+csv\char`\"{} file

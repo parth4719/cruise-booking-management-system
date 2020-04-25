@@ -1,0 +1,94 @@
+.TH "src/booking.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/booking.c \- Helps in booking the tickets for various cruise packages provided in the 'Details\&.csv'\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/booking\&.h'\fP
+.br
+\fC#include '\&.\&./include/passenger_details\&.h'\fP
+.br
+\fC#include '\&.\&./include/package_availability\&.h'\fP
+.br
+\fC#include '\&.\&./include/suite_selection\&.h'\fP
+.br
+\fC#include '\&.\&./include/update_suite_selection\&.h'\fP
+.br
+\fC#include '\&.\&./include/add_passenger\&.h'\fP
+.br
+\fC#include '\&.\&./include/fare_calculation\&.h'\fP
+.br
+\fC#include '\&.\&./include/remove_passenger\&.h'\fP
+.br
+\fC#include '\&.\&./include/read_file\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBbooking\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Helps in booking the tickets for various cruise packages provided in the 'Details\&.csv'\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Spandana Manjappa Karehanumannara - kmspandanakarehanuma@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int booking (void)"
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+creats the array of package name, fare and available seats, with the size of line_count which is used to store the details read from the 'Details\&.csv'\&.
+.PP
+Reads line by line from file pointed by fp
+.PP
+The memory is allocated for package_name array and the values of package name column in the 'Details\&.csv' is stored in this array\&.
+.PP
+The content of the Fare column in 'Details\&.csv' is stored into integer array\&.
+.PP
+The content of the Total seats column in 'Details\&.csv' is stored into integer array\&.
+.PP
+Prints the available cruise options for the customer to choose from
+.PP
+Taking the count of total passengers travelling for a particular cruise selected from the user\&.
+.PP
+function called to check the availability for requested number of seats in the selected cruise
+.PP
+Asking for the confirmation of booking from the user
+.PP
+updates the available seats in 'Details\&.csv'\&.
+.PP
+updates the boooking details in 'Bookings_info\&.csv'\&.
+.PP
+copies the content from 'pass_temp\&.csv' into 'passenger_details\&.csv' and 'pass_temp\&.csv' is deleted\&.
+.PP
+updates the remaining rooms in the cruises in 'suite_selection\&.csv' once the booking is confirmed\&.
+.PP
+Providing options to add passenger, remove passenger before confirmation of booking
+.PP
+Taking the extra passenger information to be added to the booking\&.
+.PP
+Prints the all the passengers in the booking and deletes the passenger name requested to be removed by the user, it can delete one passenger at a time\&.
+.PP
+Initializing the room booked array to zero and asking to reselect the rooms for all the passengers in the booking\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

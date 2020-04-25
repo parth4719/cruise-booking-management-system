@@ -1,0 +1,56 @@
+\hypertarget{update__seats_8c}{}\doxysection{src/update\+\_\+seats.c File Reference}
+\label{update__seats_8c}\index{src/update\_seats.c@{src/update\_seats.c}}
+
+
+Helps in updating the total seats available in the \char`\"{}\+Details.\+csv\char`\"{}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/booking.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/update\+\_\+seats.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{update__seats_8c_abe2fedc3a963bcd397037e60e16adabb}\label{update__seats_8c_abe2fedc3a963bcd397037e60e16adabb}} 
+\#define {\bfseries filename}~\char`\"{}../src/Details.\+csv\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{update__seats_8c_a9644a7c140b6f8022c2c4b9742716add}{update\+\_\+seats}} (int row\+\_\+count, char $\ast$package\+\_\+name\mbox{[}$\,$\mbox{]}, int fare\mbox{[}$\,$\mbox{]}, int total\+\_\+seats\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function updates the available seats column in \char`\"{}\+Details.\+csv\char`\"{} each time the booking is confirmed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helps in updating the total seats available in the \char`\"{}\+Details.\+csv\char`\"{}. 
+
+\begin{DoxyAuthor}{Author}
+Spandana Manjappa Karehanumannara -\/ \href{mailto:kmspandanakarehanuma@cmail.carleton.ca}{\texttt{ kmspandanakarehanuma@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{update__seats_8c_a9644a7c140b6f8022c2c4b9742716add}\label{update__seats_8c_a9644a7c140b6f8022c2c4b9742716add}} 
+\index{update\_seats.c@{update\_seats.c}!update\_seats@{update\_seats}}
+\index{update\_seats@{update\_seats}!update\_seats.c@{update\_seats.c}}
+\doxysubsubsection{\texorpdfstring{update\_seats()}{update\_seats()}}
+{\footnotesize\ttfamily void update\+\_\+seats (\begin{DoxyParamCaption}\item[{int}]{row\+\_\+count,  }\item[{char $\ast$}]{package\+\_\+name\mbox{[}$\,$\mbox{]},  }\item[{int}]{fare\mbox{[}$\,$\mbox{]},  }\item[{int}]{total\+\_\+seats\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function updates the available seats column in \char`\"{}\+Details.\+csv\char`\"{} each time the booking is confirmed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em row\+\_\+count} & The count of no. of rows in the \char`\"{}\+Detials.\+csv\char`\"{}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$package\+\_\+name\mbox{[}$\,$\mbox{]}} & The array of strings containing the packages names of all the cruises read from \char`\"{}\+Details.\+csv\char`\"{}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em fare} & The integer array containing total fare of all the packages.\\
+\hline
+\mbox{\texttt{ in}}  & {\em total} & seats The integer array containing the value of available seats in all the cruises.\\
+\hline
+\end{DoxyParams}
+Everytime the booking is confirmed this function is called to update the available seats column in \char`\"{}\+Details.\+csv\char`\"{} Function updates the available seats column in the \char`\"{}\+Details.\+csv\char`\"{}
