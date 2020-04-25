@@ -14,7 +14,7 @@ The cruise booking management system (**CBMS**) helps in booking the tickets for
 
 # Install
 
-* Installation steps are mentioned in [INSTALL.md](https://github.com/thej-rayasam/cruise-booking-management-system)
+* Installation steps are mentioned in [INSTALL.md](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/doc/INSTALL.md)
 
 # How to Compile
 
@@ -22,23 +22,13 @@ The cruise booking management system (**CBMS**) helps in booking the tickets for
 
 * Use `make clean` to remove the build artifacts during the initialization phase.
 
-* Compile the entire system through `make app`.
+* Compile the entire system through `make`.
 
 * Test the program by `make test` to build the test system.
 
 # Usage
 
 * The user needs to input the system with multiple csv files containing the package details along with the suite details for each of these packages which will be taken in as an input at different times of the program.
-
-* Ensure that the user is within the main directory`:\GroupG_CBMS;`
-
-* Execute the system in the `bin` directory with `CBMS.exe` for the option with the user defined values.
-
-*To run the application with the user defined values, the command line options will be 
-* `-c`(optional) - Following the configuration file that you want to use.
-* `-d`(optional) - Following the common list of cruises that you want to use.
-* `-o`(optional) - Output directory in order to place the scenario files. Will default to `output_folder` if  not specified.
-* `-v`(optional) - Displays the current version of the program and terminates regardless of the other options specified.
 
 # Testing
 Unit testing is done for the major functions that are defined in the system. the tes cases can be run by using the command:
