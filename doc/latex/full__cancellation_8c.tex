@@ -1,0 +1,107 @@
+\hypertarget{full__cancellation_8c}{}\doxysection{src/full\+\_\+cancellation.c File Reference}
+\label{full__cancellation_8c}\index{src/full\_cancellation.c@{src/full\_cancellation.c}}
+
+
+Helps in cancelling the tickets.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/full\+\_\+cancellation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/read\+\_\+file.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{full__cancellation_8c_a6463bfebf62b840cce684f959a0a6337}{remove\+\_\+passenger\+\_\+details}} (int id)
+\begin{DoxyCompactList}\small\item\em A Function to remove the passenger details. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{full__cancellation_8c_a35bc593bc46c056fcefd246d53c6190d}{add\+\_\+suite\+\_\+selection}} (int cruise\+\_\+number, int rooms\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em A Function to add the suite selection details after the cancellation is done. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{full__cancellation_8c_a24e99493df5fb33ac78e89a2a63a2938}{add\+\_\+details}} (int cruise\+\_\+number, int pass\+\_\+count)
+\begin{DoxyCompactList}\small\item\em A Function to add the passenger count after the cancellation is done. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{full__cancellation_8c_a10711af0c412e5e66b3b88e75aab1585}{remove\+\_\+booking}} (int id)
+\begin{DoxyCompactList}\small\item\em A Function to remove the booked ticket of the passenger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helps in cancelling the tickets. 
+
+\begin{DoxyAuthor}{Author}
+Thejprabhathrayasam -\/ \href{mailto:thejprabhathrayasam@cmail.carleton.ca}{\texttt{ thejprabhathrayasam@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{full__cancellation_8c_a24e99493df5fb33ac78e89a2a63a2938}\label{full__cancellation_8c_a24e99493df5fb33ac78e89a2a63a2938}} 
+\index{full\_cancellation.c@{full\_cancellation.c}!add\_details@{add\_details}}
+\index{add\_details@{add\_details}!full\_cancellation.c@{full\_cancellation.c}}
+\doxysubsubsection{\texorpdfstring{add\_details()}{add\_details()}}
+{\footnotesize\ttfamily void add\+\_\+details (\begin{DoxyParamCaption}\item[{int}]{cruise\+\_\+number,  }\item[{int}]{pass\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+A Function to add the passenger count after the cancellation is done. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cruise\+\_\+number} & The cruise number selected by the customer.\\
+\hline
+\mbox{\texttt{ in}}  & {\em pass\+\_\+count} & The number of the passenger count selected by the customer.\\
+\hline
+\end{DoxyParams}
+Funtion helps in increasing the passenger count after the cancellation process is done. If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fp\mbox{\Hypertarget{full__cancellation_8c_a35bc593bc46c056fcefd246d53c6190d}\label{full__cancellation_8c_a35bc593bc46c056fcefd246d53c6190d}} 
+\index{full\_cancellation.c@{full\_cancellation.c}!add\_suite\_selection@{add\_suite\_selection}}
+\index{add\_suite\_selection@{add\_suite\_selection}!full\_cancellation.c@{full\_cancellation.c}}
+\doxysubsubsection{\texorpdfstring{add\_suite\_selection()}{add\_suite\_selection()}}
+{\footnotesize\ttfamily void add\+\_\+suite\+\_\+selection (\begin{DoxyParamCaption}\item[{int}]{cruise\+\_\+number,  }\item[{int}]{rooms\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+A Function to add the suite selection details after the cancellation is done. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cruise\+\_\+number} & The cruise number selected by the customer.\\
+\hline
+\mbox{\texttt{ in}}  & {\em rooms} & The type of room selected by the customer.\\
+\hline
+\end{DoxyParams}
+Funtion helps in increasing the suite count after the cancellation process is done. \mbox{\Hypertarget{full__cancellation_8c_a10711af0c412e5e66b3b88e75aab1585}\label{full__cancellation_8c_a10711af0c412e5e66b3b88e75aab1585}} 
+\index{full\_cancellation.c@{full\_cancellation.c}!remove\_booking@{remove\_booking}}
+\index{remove\_booking@{remove\_booking}!full\_cancellation.c@{full\_cancellation.c}}
+\doxysubsubsection{\texorpdfstring{remove\_booking()}{remove\_booking()}}
+{\footnotesize\ttfamily void remove\+\_\+booking (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+A Function to remove the booked ticket of the passenger. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & The booking id of the customer.\\
+\hline
+\end{DoxyParams}
+Funtion helps in removing the booked ticket of the passenger from the id that is given. \mbox{\Hypertarget{full__cancellation_8c_a6463bfebf62b840cce684f959a0a6337}\label{full__cancellation_8c_a6463bfebf62b840cce684f959a0a6337}} 
+\index{full\_cancellation.c@{full\_cancellation.c}!remove\_passenger\_details@{remove\_passenger\_details}}
+\index{remove\_passenger\_details@{remove\_passenger\_details}!full\_cancellation.c@{full\_cancellation.c}}
+\doxysubsubsection{\texorpdfstring{remove\_passenger\_details()}{remove\_passenger\_details()}}
+{\footnotesize\ttfamily void remove\+\_\+passenger\+\_\+details (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+A Function to remove the passenger details. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & The booking id of the customer.\\
+\hline
+\end{DoxyParams}
+Funtion helps in removing the details of the customers from the id given by them. If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Removing the file.
+
+Renaming the file to the previous one.

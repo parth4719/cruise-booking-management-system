@@ -1,0 +1,76 @@
+\hypertarget{booking_8c}{}\doxysection{src/booking.c File Reference}
+\label{booking_8c}\index{src/booking.c@{src/booking.c}}
+
+
+Helps in booking the tickets for various cruise packages provided in the \char`\"{}\+Details.\+csv\char`\"{}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/booking.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/passenger\+\_\+details.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/package\+\_\+availability.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/suite\+\_\+selection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/update\+\_\+suite\+\_\+selection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/add\+\_\+passenger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/fare\+\_\+calculation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/remove\+\_\+passenger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/read\+\_\+file.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{booking_8c_a08a5b265b695de0fbff1bfa48cd83d2d}{booking}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helps in booking the tickets for various cruise packages provided in the \char`\"{}\+Details.\+csv\char`\"{}. 
+
+\begin{DoxyAuthor}{Author}
+Spandana Manjappa Karehanumannara -\/ \href{mailto:kmspandanakarehanuma@cmail.carleton.ca}{\texttt{ kmspandanakarehanuma@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{booking_8c_a08a5b265b695de0fbff1bfa48cd83d2d}\label{booking_8c_a08a5b265b695de0fbff1bfa48cd83d2d}} 
+\index{booking.c@{booking.c}!booking@{booking}}
+\index{booking@{booking}!booking.c@{booking.c}}
+\doxysubsubsection{\texorpdfstring{booking()}{booking()}}
+{\footnotesize\ttfamily int booking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+creats the array of package name, fare and available seats, with the size of line\+\_\+count which is used to store the details read from the \char`\"{}\+Details.\+csv\char`\"{}.
+
+Reads line by line from file pointed by fp
+
+The memory is allocated for package\+\_\+name array and the values of package name column in the \char`\"{}\+Details.\+csv\char`\"{} is stored in this array.
+
+The content of the Fare column in \char`\"{}\+Details.\+csv\char`\"{} is stored into integer array.
+
+The content of the Total seats column in \char`\"{}\+Details.\+csv\char`\"{} is stored into integer array.
+
+Prints the available cruise options for the customer to choose from
+
+Taking the count of total passengers travelling for a particular cruise selected from the user.
+
+function called to check the availability for requested number of seats in the selected cruise
+
+Asking for the confirmation of booking from the user
+
+updates the available seats in \char`\"{}\+Details.\+csv\char`\"{}.
+
+updates the boooking details in \char`\"{}\+Bookings\+\_\+info.\+csv\char`\"{}.
+
+copies the content from \char`\"{}pass\+\_\+temp.\+csv\char`\"{} into \char`\"{}passenger\+\_\+details.\+csv\char`\"{} and \char`\"{}pass\+\_\+temp.\+csv\char`\"{} is deleted.
+
+updates the remaining rooms in the cruises in \char`\"{}suite\+\_\+selection.\+csv\char`\"{} once the booking is confirmed.
+
+Providing options to add passenger, remove passenger before confirmation of booking
+
+Taking the extra passenger information to be added to the booking.
+
+Prints the all the passengers in the booking and deletes the passenger name requested to be removed by the user, it can delete one passenger at a time.
+
+Initializing the room booked array to zero and asking to reselect the rooms for all the passengers in the booking.

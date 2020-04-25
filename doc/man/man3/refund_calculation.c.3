@@ -1,0 +1,70 @@
+.TH "src/refund_calculation.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/refund_calculation.c \- A function to calculate the refund for cancelled tickets\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/refund_calculation\&.h'\fP
+.br
+\fC#include '\&.\&./include/full_cancellation\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrefund_calculation\fP (int pass_count, float total_fare, int id, int cruise_number, int rooms[])"
+.br
+.RI "Calculates the refund for cancellation\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A function to calculate the refund for cancelled tickets\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Swetha Meenakshi Natarajan - swethameenakshinatar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void refund_calculation (int pass_count, float total_fare, int id, int cruise_number, int rooms[])"
+
+.PP
+Calculates the refund for cancellation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpass_count\fP Number of passengers in the booking
+.br
+\fItotal_fare\fP Total fare of the booking
+.br
+\fIid\fP Booking ID of ticket to be cancelled
+.br
+\fIcruise_number\fP Cruise number entered by the customer
+.br
+\fIrooms\fP The room type entered by the customer
+.RE
+.PP
+Function takes the booking details and calculates the cancellation fee and refund for cancelling the tickets Initializing the variables
+.PP
+Getting user choice
+.PP
+Performing operation based on user choice
+.PP
+Performing full cancellation
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

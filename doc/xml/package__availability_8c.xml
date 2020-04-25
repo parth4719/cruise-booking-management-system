@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="package__availability_8c" kind="file" language="C++">
+    <compoundname>package_availability.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">../include/package_availability.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>../include/package_availability.h</label>
+      </node>
+      <node id="1">
+        <label>src/package_availability.c</label>
+        <link refid="package__availability_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="package__availability_8c_1a5203137713cd61a327252e299ce37b85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int package_availability</definition>
+        <argsstring>(int cruise_selected, int no_of_pass, int total_seats[])</argsstring>
+        <name>package_availability</name>
+        <param>
+          <type>int</type>
+          <declname>cruise_selected</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>no_of_pass</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>total_seats</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Checks the availability of seats in the cruise. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cruise_selected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of cruise selected for booking. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">no_of_pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of passengers travelling in one booking. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of total seats Array of total number of seats available in all the cruise types.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function takes the selected cruise type, number of passengers and total numbers of seats in all the cruise as input, and checks the seat availability for number of passengers provided in the particular selected cruise type.</para>
+<para><simplesect kind="return"><para>If seats available returns -1, if seats are not available returns the count of remaining available seats in the cruise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns -2 if invalid parameters are provided to the function.</para>
+<para>Returns -1 if seats are available in the selected cruise.</para>
+<para>returns the count of remaining number of seats available in the selected cruise.</para>
+        </inbodydescription>
+        <location file="src/package_availability.c" line="29" column="5" bodyfile="src/package_availability.c" bodystart="29" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Function to check the availability of seats in the particular cruise opted by the customer. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Spandana Manjappa Karehanumannara - <ulink url="mailto:kmspandanakarehanuma@cmail.carleton.ca">kmspandanakarehanuma@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/package_availability.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="package__availability_8c_1a5203137713cd61a327252e299ce37b85" kindref="member">package_availability</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cruise_selected,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no_of_pass,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>total_seats[]){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cruise_selected&lt;=0<sp/>||<sp/>no_of_pass<sp/>&lt;=0<sp/>||<sp/>(total_seats==NULL)){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s:<sp/>Invalid<sp/>input<sp/>to<sp/>the<sp/>function<sp/>\n&quot;</highlight><highlight class="normal">,__func__);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-2;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(no_of_pass<sp/>&lt;=<sp/>total_seats[cruise_selected-1]){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>total_seats[cruise_selected-1]<sp/>-=<sp/>no_of_pass;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>total_seats[cruise_selected-1];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/package_availability.c"/>
+  </compounddef>
+</doxygen>

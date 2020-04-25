@@ -1,0 +1,58 @@
+\hypertarget{refund__calculation_8c}{}\doxysection{src/refund\+\_\+calculation.c File Reference}
+\label{refund__calculation_8c}\index{src/refund\_calculation.c@{src/refund\_calculation.c}}
+
+
+A function to calculate the refund for cancelled tickets.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/refund\+\_\+calculation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/full\+\_\+cancellation.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{refund__calculation_8c_a3fb860f4088da67926b3f153b2d38aea}{refund\+\_\+calculation}} (int pass\+\_\+count, float total\+\_\+fare, int id, int cruise\+\_\+number, int rooms\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Calculates the refund for cancellation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A function to calculate the refund for cancelled tickets. 
+
+\begin{DoxyAuthor}{Author}
+Swetha Meenakshi Natarajan -\/ \href{mailto:swethameenakshinatar@cmail.carleton.ca}{\texttt{ swethameenakshinatar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{refund__calculation_8c_a3fb860f4088da67926b3f153b2d38aea}\label{refund__calculation_8c_a3fb860f4088da67926b3f153b2d38aea}} 
+\index{refund\_calculation.c@{refund\_calculation.c}!refund\_calculation@{refund\_calculation}}
+\index{refund\_calculation@{refund\_calculation}!refund\_calculation.c@{refund\_calculation.c}}
+\doxysubsubsection{\texorpdfstring{refund\_calculation()}{refund\_calculation()}}
+{\footnotesize\ttfamily void refund\+\_\+calculation (\begin{DoxyParamCaption}\item[{int}]{pass\+\_\+count,  }\item[{float}]{total\+\_\+fare,  }\item[{int}]{id,  }\item[{int}]{cruise\+\_\+number,  }\item[{int}]{rooms\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Calculates the refund for cancellation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pass\+\_\+count} & Number of passengers in the booking\\
+\hline
+\mbox{\texttt{ in}}  & {\em total\+\_\+fare} & Total fare of the booking\\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Booking ID of ticket to be cancelled\\
+\hline
+\mbox{\texttt{ in}}  & {\em cruise\+\_\+number} & Cruise number entered by the customer\\
+\hline
+\mbox{\texttt{ in}}  & {\em rooms} & The room type entered by the customer\\
+\hline
+\end{DoxyParams}
+Function takes the booking details and calculates the cancellation fee and refund for cancelling the tickets Initializing the variables
+
+Getting user choice
+
+Performing operation based on user choice
+
+Performing full cancellation

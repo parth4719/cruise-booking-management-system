@@ -1,0 +1,75 @@
+.TH "src/add_passenger.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/add_passenger.c \- This function add the extra passenger details into the file 'pass_temp\&.csv'\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include '\&.\&./include/passenger_details\&.h'\fP
+.br
+\fC#include '\&.\&./include/add_passenger\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBfname\fP   '\&.\&./src/pass_temp\&.csv'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd_passenger\fP (int no_of_passengers)"
+.br
+.RI "Adds the details of the passengers to 'pass_temp\&.csv' file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This function add the extra passenger details into the file 'pass_temp\&.csv'\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Spandana Manjappa Karehanumannara - kmspandanakarehanuma@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void add_passenger (int no_of_passengers)"
+
+.PP
+Adds the details of the passengers to 'pass_temp\&.csv' file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno_of_passengers\fP The extra number of passengers to be added for the booking
+.RE
+.PP
+Stores the passenger details consists of the 1\&.Name 2\&.Age 3\&.Gender 4\&.Email 5\&.Disability into an individual rows for every passenger into 'pass_temp\&.csv' file\&. Trying to open the file If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Asking for the passenger's name
+.PP
+Asking for the passenger's age
+.PP
+Asking for the passenger's gender
+.PP
+Asking for the passenger's email address
+.PP
+Asking for the passenger disability
+.PP
+Storing the details into the 'passenger_details\&.csv' file
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

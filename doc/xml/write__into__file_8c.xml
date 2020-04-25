@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="write__into__file_8c" kind="file" language="C++">
+    <compoundname>write_into_file.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">../include/booking.h</includes>
+    <includes local="yes">../include/write_into_file.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/write_into_file.c</label>
+        <link refid="write__into__file_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>../include/write_into_file.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>../include/booking.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="write__into__file_8c_1ab6819e3f0410378cf5bf23c153d98c11" prot="public" static="no">
+        <name>storing_file</name>
+        <initializer>&quot;../src/Bookings_info.csv&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/write_into_file.c" line="15" column="11" bodyfile="src/write_into_file.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="write__into__file_8c_1a2a15e436f391675f6baec3367ef93a9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void write_into_file</definition>
+        <argsstring>(int suite_length, int file_id, int cruise_selected, char *package_name[], int no_of_pass, float total_fare, int *room_booked)</argsstring>
+        <name>write_into_file</name>
+        <param>
+          <type>int</type>
+          <declname>suite_length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>file_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cruise_selected</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>package_name</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>no_of_pass</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>total_fare</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>room_booked</declname>
+        </param>
+        <briefdescription>
+<para>This function updates the available seats column in &quot;Details.csv&quot; each time the booking is confirmed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">row_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The count of no. of rows in the &quot;Detials.csv&quot;.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">file_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row value of the first passenger belonging to particular booking stored in &quot;passenger_details.csv&quot;.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cruise_selected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of cruise selected.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cruise_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the cruise selected.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">no_of_pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the total number of passengers in the specific booking.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">total_fare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the total fare value of specific booking.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">room_booked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array contaning the no. of rooms booked and types of rooms booked of specific booking.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+After the booking is confirmed this function is called to store the all the booking details into &quot;Bookings_info.csv&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>If we fail to open the file, then we need to abort the program, there is nothing to be done.</para>
+<para>Storing the details into the &quot;bookings_info.csv&quot; file</para>
+        </inbodydescription>
+        <location file="src/write_into_file.c" line="38" column="6" bodyfile="src/write_into_file.c" bodystart="38" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helps in updating the seat availability in the &quot;Details.csv&quot;. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Spandana Manjappa Karehanumannara - <ulink url="mailto:kmspandanakarehanuma@cmail.carleton.ca">kmspandanakarehanuma@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/booking.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/write_into_file.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>storing_file<sp/>&quot;../src/Bookings_info.csv&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="write__into__file_8c_1a2a15e436f391675f6baec3367ef93a9c" kindref="member">write_into_file</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>suite_length,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>file_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cruise_selected,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*package_name[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no_of_pass,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>total_fare,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*room_booked){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fp=fopen(storing_file,</highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fp<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>open<sp/>the<sp/>file<sp/>\&quot;Bookins_info.csv\&quot;<sp/>in<sp/>%s\n&quot;</highlight><highlight class="normal">,__func__);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(0);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(fp,</highlight><highlight class="stringliteral">&quot;%d,%d,%s,%d,%f,&quot;</highlight><highlight class="normal">,file_id,<sp/>cruise_selected,<sp/>package_name[cruise_selected-1],<sp/>no_of_pass,<sp/>total_fare);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;suite_length-1;i++){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fp,</highlight><highlight class="stringliteral">&quot;%d,&quot;</highlight><highlight class="normal">,room_booked[i]);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(fp,</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fp);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/write_into_file.c"/>
+  </compounddef>
+</doxygen>

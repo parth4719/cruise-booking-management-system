@@ -1,0 +1,68 @@
+.TH "src/display_booking_details.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/display_booking_details.c \- : A function to read and display the booking details\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./include/read_file\&.h'\fP
+.br
+\fC#include '\&.\&./include/cancellation\&.h'\fP
+.br
+\fC#include '\&.\&./include/refund_calculation\&.h'\fP
+.br
+\fC#include '\&.\&./include/display_booking_details\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdisplay_booking_details\fP (int *id, int *pass_count, float *total_fare, int *cruise_number1, int rooms[])"
+.br
+.RI "Reads the booking id obtained from user\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+: A function to read and display the booking details\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+: vishnurajasekar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void display_booking_details (int * id, int * pass_count, float * total_fare, int * cruise_number1, int rooms[])"
+
+.PP
+Reads the booking id obtained from user\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Booking ID obtained from user
+.br
+\fIpass_count\fP The passenger count from the user
+.br
+\fItotal_fare\fP The integer array containing total fare of all the packages\&.
+.br
+\fIcruise_number\fP The cruise number selected by the user
+.br
+\fIrooms\fP The rooms that are available\&.
+.RE
+.PP
+Function displays booking details corresponding to booking ID obtained from user after reading the details from the file 'Bookings_info\&.csv' 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

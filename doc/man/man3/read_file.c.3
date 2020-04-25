@@ -1,0 +1,54 @@
+.TH "src/read_file.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/read_file.c \- Read the file provided as input and retunrs the number of rows\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include '\&.\&./include/read_file\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBread_file\fP (char *file)"
+.br
+.RI "This function takes the file name as input and returns the count of rows in that file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Read the file provided as input and retunrs the number of rows\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Thejprabhath Rayasam- thejprabhathrayasam@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int read_file (char * file)"
+
+.PP
+This function takes the file name as input and returns the count of rows in that file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*file\fP Name of the file to be read\&.
+.RE
+.PP
+This function takes the file name as input and returns the count of rows in that file\&. If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fp
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

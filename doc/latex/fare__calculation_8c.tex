@@ -1,0 +1,94 @@
+\hypertarget{fare__calculation_8c}{}\doxysection{src/fare\+\_\+calculation.c File Reference}
+\label{fare__calculation_8c}\index{src/fare\_calculation.c@{src/fare\_calculation.c}}
+
+
+A function to calculate the total fare of a booking made by a user.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/fare\+\_\+calculation.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{fare__calculation_8c_a1559f2bd35408df6d1c7fa9530b02652}{fare\+\_\+calculation}} (int no\+\_\+of\+\_\+pass, int package\+\_\+fare, int cruise\+\_\+selected, int suite\+\_\+length, int $\ast$room\+\_\+booked)
+\begin{DoxyCompactList}\small\item\em Calculates the total fare of a booking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A function to calculate the total fare of a booking made by a user. 
+
+\begin{DoxyAuthor}{Author}
+Swetha Meenakshi Natarajan -\/ \href{mailto:swethameenakshinatar@cmail.carleton.ca}{\texttt{ swethameenakshinatar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fare__calculation_8c_a1559f2bd35408df6d1c7fa9530b02652}\label{fare__calculation_8c_a1559f2bd35408df6d1c7fa9530b02652}} 
+\index{fare\_calculation.c@{fare\_calculation.c}!fare\_calculation@{fare\_calculation}}
+\index{fare\_calculation@{fare\_calculation}!fare\_calculation.c@{fare\_calculation.c}}
+\doxysubsubsection{\texorpdfstring{fare\_calculation()}{fare\_calculation()}}
+{\footnotesize\ttfamily float fare\+\_\+calculation (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+of\+\_\+pass,  }\item[{int}]{package\+\_\+fare,  }\item[{int}]{cruise\+\_\+selected,  }\item[{int}]{suite\+\_\+length,  }\item[{int $\ast$}]{room\+\_\+booked }\end{DoxyParamCaption})}
+
+
+
+Calculates the total fare of a booking. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em no\+\_\+of\+\_\+pass} & Number of passengers in the booking\\
+\hline
+\mbox{\texttt{ in}}  & {\em package\+\_\+fare} & Array of the fares for the available cruises read from the file\\
+\hline
+\end{DoxyParams}
+Function takes the number of passengers for the cruise selected, the cruise fare, the types of rooms selected, the fares and discounts for different types of rooms as input and applies discounts for specially abled, different age groups of passengers and group size to calculate the total fare of that booking
+
+\begin{DoxyReturn}{Returns}
+Returns the total fare of the booking 
+\end{DoxyReturn}
+Initializing the variables
+
+Calculating fare for number of passengers for the cruise selected
+
+Opening file to read passengers\textquotesingle{} details
+
+If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fp
+
+Opening file to read discount based on age group and storing data read from each column as different arrays
+
+If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fa
+
+Opening file to read discount based on group size and storing data read from each column as different arrays
+
+If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fg
+
+Opening file to read disability discount and storing data read from each column as different arrays
+
+If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fd
+
+Opening file to read the additional fares and discounts applicable for different suites and storing data read from each column as different arrays
+
+If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fs
+
+Applying discount based on age group
+
+Applying discount based on group size
+
+Apply discount for disabilities
+
+Apply additonal fare and discount based on selected suite category
+
+Total fare is calculated after applying discounts
+
+Total fare for the booking is returned

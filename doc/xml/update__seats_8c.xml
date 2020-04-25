@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="update__seats_8c" kind="file" language="C++">
+    <compoundname>update_seats.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">../include/booking.h</includes>
+    <includes local="yes">../include/update_seats.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>../include/update_seats.h</label>
+      </node>
+      <node id="1">
+        <label>src/update_seats.c</label>
+        <link refid="update__seats_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>../include/booking.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="update__seats_8c_1abe2fedc3a963bcd397037e60e16adabb" prot="public" static="no">
+        <name>filename</name>
+        <initializer>&quot;../src/Details.csv&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/update_seats.c" line="14" column="11" bodyfile="src/update_seats.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="update__seats_8c_1a9644a7c140b6f8022c2c4b9742716add" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void update_seats</definition>
+        <argsstring>(int row_count, char *package_name[], int fare[], int total_seats[])</argsstring>
+        <name>update_seats</name>
+        <param>
+          <type>int</type>
+          <declname>row_count</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>package_name</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fare</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>total_seats</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>This function updates the available seats column in &quot;Details.csv&quot; each time the booking is confirmed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">row_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The count of no. of rows in the &quot;Detials.csv&quot;.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*package_name[]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of strings containing the packages names of all the cruises read from &quot;Details.csv&quot;.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer array containing total fare of all the packages.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">total</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>seats The integer array containing the value of available seats in all the cruises.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Everytime the booking is confirmed this function is called to update the available seats column in &quot;Details.csv&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Function updates the available seats column in the &quot;Details.csv&quot;</para>
+        </inbodydescription>
+        <location file="src/update_seats.c" line="31" column="6" bodyfile="src/update_seats.c" bodystart="31" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helps in updating the total seats available in the &quot;Details.csv&quot;. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Spandana Manjappa Karehanumannara - <ulink url="mailto:kmspandanakarehanuma@cmail.carleton.ca">kmspandanakarehanuma@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/booking.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/update_seats.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>filename<sp/>&quot;../src/Details.csv&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="update__seats_8c_1a9644a7c140b6f8022c2c4b9742716add" kindref="member">update_seats</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row_count,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*package_name[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fare[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>total_seats[]){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fp;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name=</highlight><highlight class="stringliteral">&quot;Package<sp/>Name&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fare1=</highlight><highlight class="stringliteral">&quot;Fare&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>seats[100]=</highlight><highlight class="stringliteral">&quot;Available<sp/>Seats&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>fp=fopen(filename,</highlight><highlight class="stringliteral">&quot;w+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fp<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>open<sp/>the<sp/>file<sp/>\&quot;Details.csv\&quot;<sp/>in<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>__func__);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(fp,</highlight><highlight class="stringliteral">&quot;%s,%s,%s\n&quot;</highlight><highlight class="normal">,name,<sp/>fare1,<sp/>seats);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;row_count-1;i++){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fp,</highlight><highlight class="stringliteral">&quot;%s,%d,%d\n&quot;</highlight><highlight class="normal">,<sp/>package_name[i],<sp/>fare[i],<sp/>total_seats[i]);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fp);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/update_seats.c"/>
+  </compounddef>
+</doxygen>

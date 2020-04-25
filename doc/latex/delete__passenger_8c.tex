@@ -1,0 +1,57 @@
+\hypertarget{delete__passenger_8c}{}\doxysection{src/delete\+\_\+passenger.c File Reference}
+\label{delete__passenger_8c}\index{src/delete\_passenger.c@{src/delete\_passenger.c}}
+
+
+A function to calculate the refund for cancelled tickets.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/delete\+\_\+passenger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/refund\+\_\+calculation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/full\+\_\+cancellation.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{delete__passenger_8c_af7f21d6ca6805c59ada87a99e461fb5a}{delete\+\_\+passenger}} (int no\+\_\+of\+\_\+pass, int pass\+\_\+count, int id)
+\begin{DoxyCompactList}\small\item\em Function to delete the records of selected passengers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A function to calculate the refund for cancelled tickets. 
+
+\begin{DoxyAuthor}{Author}
+Swetha Meenakshi Natarajan -\/ \href{mailto:swethameenakshinatar@cmail.carleton.ca}{\texttt{ swethameenakshinatar@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{delete__passenger_8c_af7f21d6ca6805c59ada87a99e461fb5a}\label{delete__passenger_8c_af7f21d6ca6805c59ada87a99e461fb5a}} 
+\index{delete\_passenger.c@{delete\_passenger.c}!delete\_passenger@{delete\_passenger}}
+\index{delete\_passenger@{delete\_passenger}!delete\_passenger.c@{delete\_passenger.c}}
+\doxysubsubsection{\texorpdfstring{delete\_passenger()}{delete\_passenger()}}
+{\footnotesize\ttfamily void delete\+\_\+passenger (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+of\+\_\+pass,  }\item[{int}]{pass\+\_\+count,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Function to delete the records of selected passengers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pass\+\_\+count} & Number of passengers in the booking\\
+\hline
+\mbox{\texttt{ in}}  & {\em no\+\_\+of\+\_\+pass} & Number of passengers to be deleted\\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Booking ID of ticket to be cancelled\\
+\hline
+\end{DoxyParams}
+Function takes the booking id, number of passengers in booking and number of passengers to be deleted to delete the record of passengers If we fail to open the file, then we need to abort the program, there is nothing to be done.
+
+Reads line by line from file pointed by fp
+
+Removing the details row of the passenger.
+
+Removing the f1 csv file.
+
+Renaming the temp file as the f1 file.

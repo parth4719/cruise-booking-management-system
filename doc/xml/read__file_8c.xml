@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="read__file_8c" kind="file" language="C++">
+    <compoundname>read_file.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">../include/read_file.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>../include/read_file.h</label>
+      </node>
+      <node id="1">
+        <label>src/read_file.c</label>
+        <link refid="read__file_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="read__file_8c_1ae8615759e96b1be0a167e3605dbaa82d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_file</definition>
+        <argsstring>(char *file)</argsstring>
+        <name>read_file</name>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>This function takes the file name as input and returns the count of rows in that file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the file to be read.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function takes the file name as input and returns the count of rows in that file. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>If we fail to open the file, then we need to abort the program, there is nothing to be done.</para>
+<para>Reads line by line from file pointed by fp</para>
+        </inbodydescription>
+        <location file="src/read_file.c" line="23" column="5" bodyfile="src/read_file.c" bodystart="23" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Read the file provided as input and retunrs the number of rows. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Thejprabhath Rayasam- <ulink url="mailto:thejprabhathrayasam@cmail.carleton.ca">thejprabhathrayasam@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/read_file.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="read__file_8c_1ae8615759e96b1be0a167e3605dbaa82d" kindref="member">read_file</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c[1024];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count=0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fp<sp/>=<sp/>fopen(file,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!fp)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>open<sp/>%s<sp/>in<sp/>%s\n&quot;</highlight><highlight class="normal">,file,__func__);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(fgets(c,<sp/>1024,<sp/>fp)!=NULL)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fp);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/read_file.c"/>
+  </compounddef>
+</doxygen>

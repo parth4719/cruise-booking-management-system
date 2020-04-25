@@ -1,0 +1,73 @@
+.TH "src/remove_passenger.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/remove_passenger.c \- This function removes the passenger details from the file 'pass_temp\&.csv'\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/passenger_details\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBfname\fP   '\&.\&./src/pass_temp\&.csv'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBremove_passenger\fP (int no_of_pass)"
+.br
+.RI "Removes the details of the passengers from 'pass_temp\&.csv' file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This function removes the passenger details from the file 'pass_temp\&.csv'\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Thejprabhath Rayasam - thejprabhathrayasam@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void remove_passenger (int no_of_pass)"
+
+.PP
+Removes the details of the passengers from 'pass_temp\&.csv' file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno_of_pass\fP The number of passengers that needs to be removed for the booking
+.RE
+.PP
+Removes the passenger details consists of the 1\&.Name 2\&.Age 3\&.Gender 4\&.Email 5\&.Disability from 'pass_temp\&.csv' file\&. If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fp
+.PP
+data read from 1st column of every row in the file is printed
+.PP
+Requesting for the count of the passengers to be removed\&.
+.PP
+Removing the row of the passenger detail that needs to be deleted\&.
+.PP
+Removing the fname csv file\&.
+.PP
+Renaming the temporary csv file and the fname file\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

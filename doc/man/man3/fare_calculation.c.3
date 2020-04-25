@@ -1,0 +1,107 @@
+.TH "src/fare_calculation.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/fare_calculation.c \- A function to calculate the total fare of a booking made by a user\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/fare_calculation\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fBfare_calculation\fP (int no_of_pass, int package_fare, int cruise_selected, int suite_length, int *room_booked)"
+.br
+.RI "Calculates the total fare of a booking\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A function to calculate the total fare of a booking made by a user\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Swetha Meenakshi Natarajan - swethameenakshinatar@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "float fare_calculation (int no_of_pass, int package_fare, int cruise_selected, int suite_length, int * room_booked)"
+
+.PP
+Calculates the total fare of a booking\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno_of_pass\fP Number of passengers in the booking
+.br
+\fIpackage_fare\fP Array of the fares for the available cruises read from the file
+.RE
+.PP
+Function takes the number of passengers for the cruise selected, the cruise fare, the types of rooms selected, the fares and discounts for different types of rooms as input and applies discounts for specially abled, different age groups of passengers and group size to calculate the total fare of that booking
+.PP
+\fBReturns\fP
+.RS 4
+Returns the total fare of the booking 
+.RE
+.PP
+Initializing the variables
+.PP
+Calculating fare for number of passengers for the cruise selected
+.PP
+Opening file to read passengers' details
+.PP
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fp
+.PP
+Opening file to read discount based on age group and storing data read from each column as different arrays
+.PP
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fa
+.PP
+Opening file to read discount based on group size and storing data read from each column as different arrays
+.PP
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fg
+.PP
+Opening file to read disability discount and storing data read from each column as different arrays
+.PP
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fd
+.PP
+Opening file to read the additional fares and discounts applicable for different suites and storing data read from each column as different arrays
+.PP
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fs
+.PP
+Applying discount based on age group
+.PP
+Applying discount based on group size
+.PP
+Apply discount for disabilities
+.PP
+Apply additonal fare and discount based on selected suite category
+.PP
+Total fare is calculated after applying discounts
+.PP
+Total fare for the booking is returned
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

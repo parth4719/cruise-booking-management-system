@@ -1,0 +1,77 @@
+.TH "src/passenger_details.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/passenger_details.c \- Reading the details of the passengers and storing the details into 'passenger_details\&.csv' file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/passenger_details\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBpassenger_details\fP (int no_of_passengers)"
+.br
+.RI "Adds the details of the passengers to 'passenger_details\&.csv' file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Reading the details of the passengers and storing the details into 'passenger_details\&.csv' file\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Thejprabhath Rayasam- thejprabhathrayasam@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int passenger_details (int no_of_passengers)"
+
+.PP
+Adds the details of the passengers to 'passenger_details\&.csv' file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIno_of_passengers\fP The number of passengers to travel
+.RE
+.PP
+Stores the passenger details consists of the 1\&.Name 2\&.Age 3\&.Gender 4\&.Email 5\&.Disability into an individual rows for every passenger into 'passenger_details\&.csv' file\&.
+.PP
+\fBReturns\fP
+.RS 4
+The number of the row of the first passenger of the booking in the csv file 
+.RE
+.PP
+Declaring the variables
+.PP
+Checking whether the file is opened properly in reading mode
+.PP
+Counting the number of rows in the file
+.PP
+Asking for the passenger's name
+.PP
+Asking for the passenger's age
+.PP
+Asking for the passenger's gender
+.PP
+Asking for the passenger's email address
+.PP
+Asking for the passenger disability
+.PP
+Storing the details into the 'passenger_details\&.csv' file
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.

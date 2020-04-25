@@ -1,0 +1,113 @@
+.TH "src/full_cancellation.c" 3 "Fri Apr 24 2020" "CBMS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/full_cancellation.c \- Helps in cancelling the tickets\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include '\&.\&./include/full_cancellation\&.h'\fP
+.br
+\fC#include '\&.\&./include/read_file\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBremove_passenger_details\fP (int id)"
+.br
+.RI "A Function to remove the passenger details\&. "
+.ti -1c
+.RI "void \fBadd_suite_selection\fP (int cruise_number, int rooms[])"
+.br
+.RI "A Function to add the suite selection details after the cancellation is done\&. "
+.ti -1c
+.RI "void \fBadd_details\fP (int cruise_number, int pass_count)"
+.br
+.RI "A Function to add the passenger count after the cancellation is done\&. "
+.ti -1c
+.RI "void \fBremove_booking\fP (int id)"
+.br
+.RI "A Function to remove the booked ticket of the passenger\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Helps in cancelling the tickets\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Thejprabhathrayasam - thejprabhathrayasam@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void add_details (int cruise_number, int pass_count)"
+
+.PP
+A Function to add the passenger count after the cancellation is done\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcruise_number\fP The cruise number selected by the customer\&.
+.br
+\fIpass_count\fP The number of the passenger count selected by the customer\&.
+.RE
+.PP
+Funtion helps in increasing the passenger count after the cancellation process is done\&. If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Reads line by line from file pointed by fp
+.SS "void add_suite_selection (int cruise_number, int rooms[])"
+
+.PP
+A Function to add the suite selection details after the cancellation is done\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcruise_number\fP The cruise number selected by the customer\&.
+.br
+\fIrooms\fP The type of room selected by the customer\&.
+.RE
+.PP
+Funtion helps in increasing the suite count after the cancellation process is done\&. 
+.SS "void remove_booking (int id)"
+
+.PP
+A Function to remove the booked ticket of the passenger\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP The booking id of the customer\&.
+.RE
+.PP
+Funtion helps in removing the booked ticket of the passenger from the id that is given\&. 
+.SS "void remove_passenger_details (int id)"
+
+.PP
+A Function to remove the passenger details\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP The booking id of the customer\&.
+.RE
+.PP
+Funtion helps in removing the details of the customers from the id given by them\&. If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+If we fail to open the file, then we need to abort the program, there is nothing to be done\&.
+.PP
+Removing the file\&.
+.PP
+Renaming the file to the previous one\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CBMS from the source code\&.
