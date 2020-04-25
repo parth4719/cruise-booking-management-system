@@ -30,7 +30,7 @@
 
 ## Installation
 
-Installation steps are mentioned in [INSTALL.md](*********Provide the link for Install.md****)
+Installation steps are mentioned in [INSTALL.md](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/doc/INSTALL.md)
 
 
 ## File Structure
@@ -107,12 +107,12 @@ The following file structure is used to organize files in this repository:
 
 
 ## Usage
-To run, you must first install it. Then you can follow instructions mentioned in [User_Manual.md](***provide link for user_manual.md***).
+To run, you must first install it. Then you can follow instructions mentioned in [User_Manual.md](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/doc/user%20manual.md).
 
 
 ## For Developers
  
-The developer manual is available  [Developer_Manual.md](**provide the link for [Developer_Manual.md]*** ).
+The developer manual is available  [Developer_Manual.md](https://github.com/thej-rayasam/cruise-booking-management-system/blob/master/doc/Developer_manual.md).
 
 
 ##  License
